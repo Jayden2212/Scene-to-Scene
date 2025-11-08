@@ -1146,7 +1146,7 @@ TerrainCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 383c52c5dd0b6304e950169f371ab10e, type: 2}
   m_EnableTreeColliders: 1
