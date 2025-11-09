@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     public float jumpCooldown;
     public float airMultiplier;
-    bool readyToJump;
+    // bool readyToJump;
 
     [Header("Ground Check")]
     public float playerHeight;
@@ -86,10 +86,10 @@ public class PlayerController : MonoBehaviour
     //     }
     // }
 
-    void ResetJump()
-    {
-        readyToJump = true;
-    }
+    // void ResetJump()
+    // {
+    //     readyToJump = true;
+    // }
 
     void SpeedControl()
     {
