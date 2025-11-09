@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,6 +12,10 @@ public class PlayerController : MonoBehaviour
     [Header("Movement Settings")]
     public float movementSpeed;
     public float groundDrag;
+    public float jumpForce;
+    public float jumpCooldown;
+    public float airMultiplier;
+    bool readyToJump;
 
     [Header("Ground Check")]
     public float playerHeight;
@@ -22,6 +25,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        //readyToJump = true;
     }
 
     void Update()
@@ -41,7 +45,7 @@ public class PlayerController : MonoBehaviour
 
         SpeedControl();
 
-        Debug.Log(rb.linearVelocity);
+        //Debug.Log(rb.linearVelocity);
     }
 
     void FixedUpdate()
@@ -50,7 +54,16 @@ public class PlayerController : MonoBehaviour
         Vector3 movement = orientation.forward * movementVector.y +
         orientation.right * movementVector.x;
 
-        rb.AddForce(movement.normalized * movementSpeed * 10f, ForceMode.Force);
+        // on ground
+        if (grounded)
+        {
+            rb.AddForce(movement.normalized * movementSpeed * 10f, ForceMode.Force);
+        }
+        // on air
+        else
+        {
+            rb.AddForce(movement.normalized * movementSpeed * 10f * airMultiplier, ForceMode.Force);
+        }
     }
 
     public void OnMove(InputValue val)
@@ -58,10 +71,25 @@ public class PlayerController : MonoBehaviour
         movementVector = val.Get<Vector2>();
     }
 
-    // public void OnJump(InputValue val)
+    // public void OnJump()
     // {
-    //     movementVector = val.Get<Vector2>();
+    //     if (readyToJump && grounded)
+    //     {
+    //         readyToJump = false;
+    //         // reset y velocity
+    //         rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
+
+    //         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+
+    //         // resets the readyToJump boolean after a set amount of time
+    //         Invoke(nameof(ResetJump), jumpCooldown);
+    //     }
     // }
+
+    void ResetJump()
+    {
+        readyToJump = true;
+    }
 
     void SpeedControl()
     {
