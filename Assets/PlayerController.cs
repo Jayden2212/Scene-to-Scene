@@ -60,10 +60,10 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(movement.normalized * movementSpeed * 10f, ForceMode.Force);
         }
         // on air
-        else
-        {
-            rb.AddForce(movement.normalized * movementSpeed * 10f * airMultiplier, ForceMode.Force);
-        }
+        // else
+        // {
+        //     rb.AddForce(movement.normalized * movementSpeed * 10f * airMultiplier, ForceMode.Force);
+        // }
     }
 
     public void OnMove(InputValue val)
