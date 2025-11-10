@@ -1900,6 +1900,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SodaCanPhysics
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e0b245ad42a634b569aa19f5b1dae347, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: e0b245ad42a634b569aa19f5b1dae347, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.1
@@ -1940,6 +1944,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: e0b245ad42a634b569aa19f5b1dae347, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1950,6 +1958,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8164078558771037576, guid: e0b245ad42a634b569aa19f5b1dae347, type: 3}
       insertIndex: -1
       addedObject: {fileID: 836371442}
+    - targetCorrespondingSourceObject: {fileID: 8164078558771037576, guid: e0b245ad42a634b569aa19f5b1dae347, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 836371447}
   m_SourcePrefab: {fileID: 100100000, guid: e0b245ad42a634b569aa19f5b1dae347, type: 3}
 --- !u!4 &836371439 stripped
 Transform:
@@ -2011,6 +2022,18 @@ CapsuleCollider:
   m_Height: 3.504378
   m_Direction: 1
   m_Center: {x: -0.0000038146973, y: 1.758238, z: 0.0000076293945}
+--- !u!114 &836371447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836371440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93375774801504f30addaa158bd15d9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractVendingMachineObject
 --- !u!1 &870339650
 GameObject:
   m_ObjectHideFlags: 0
@@ -2209,7 +2232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactor
   interactorSource: {fileID: 870339653}
-  interactRange: 4
+  interactRange: 5
   mask:
     serializedVersion: 2
     m_Bits: 256
@@ -2960,7 +2983,8 @@ GameObject:
   - component: {fileID: 1306276180}
   - component: {fileID: 1306276179}
   - component: {fileID: 1306276178}
-  m_Layer: 0
+  - component: {fileID: 1306276182}
+  m_Layer: 8
   m_Name: Lays - ClassicPhysics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3087,6 +3111,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1306276176}
   m_Mesh: {fileID: 7765153969656960549, guid: 843a76da305dd4f60b840a89b0413fd4, type: 3}
+--- !u!114 &1306276182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306276176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93375774801504f30addaa158bd15d9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractVendingMachineObject
 --- !u!1 &1309372406 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5252614058741765545, guid: c702fc61be1ea13409039f02f18d44f2, type: 3}
@@ -3755,6 +3791,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.054949105, y: 0.04460013, z: 0.14588396}
   m_Center: {x: 0, y: 0.0075591444, z: 0.0028514743}
+--- !u!114 &1648213839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648213834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93375774801504f30addaa158bd15d9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractVendingMachineObject
 --- !u!4 &1673798748 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7326308086656437384, guid: 81d960fe44e3f6b46bcda7b24988e254, type: 3}
@@ -4128,7 +4176,7 @@ GameObject:
   - component: {fileID: 1806537641}
   - component: {fileID: 1806537640}
   m_Layer: 0
-  m_Name: CandyBar1Model
+  m_Name: CandyBar1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4328,7 +4376,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 0950e499b8efd4f1c9baba770b379cf7, type: 2}
     - target: {fileID: 919132149155446097, guid: e0b245ad42a634b569aa19f5b1dae347, type: 3}
       propertyPath: m_Name
-      value: SodaCanModel
+      value: SodaCan
       objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: e0b245ad42a634b569aa19f5b1dae347, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4705,6 +4753,10 @@ PrefabInstance:
       value: CandyBar1Physics
       objectReference: {fileID: 0}
     - target: {fileID: -3747132350731191759, guid: afd6ad11f2e9e48b59d8ef8b286170b7, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -3747132350731191759, guid: afd6ad11f2e9e48b59d8ef8b286170b7, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -4929,6 +4981,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -3747132350731191759, guid: afd6ad11f2e9e48b59d8ef8b286170b7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1648213836}
+    - targetCorrespondingSourceObject: {fileID: -3747132350731191759, guid: afd6ad11f2e9e48b59d8ef8b286170b7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1648213839}
   m_SourcePrefab: {fileID: 100100000, guid: afd6ad11f2e9e48b59d8ef8b286170b7, type: 3}
 --- !u!1 &2079507326
 GameObject:

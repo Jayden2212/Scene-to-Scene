@@ -12,7 +12,7 @@ public class Interactor : MonoBehaviour
 
     // length of interacting raycast
     public float interactRange;
-    
+
     // layer of the target object
     public LayerMask mask;
 
