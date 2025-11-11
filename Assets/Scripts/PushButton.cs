@@ -14,7 +14,7 @@ public class PushButton : MonoBehaviour, IInteractable
     {
         if (dropped == false)
         {
-            Instantiate(dropItem, new Vector3(gameObject.transform.position.x + .25f, 1f, gameObject.transform.position.z + 1.5f), Quaternion.Euler(0f, 0f, 0f));
+            Instantiate(dropItem, new Vector3(transform.position.x + .25f, 0.5f, transform.position.z + 0.5f), Quaternion.Euler(0f, 0f, 0f));
             dropped = true;
         }
     }
